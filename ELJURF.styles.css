@@ -101,15 +101,6 @@ footer .icon{
 
 /* ----- HANDLE PREFERS REDUCED MOTION FOR THE ICON ANIMATIONS ----- */
 /* --------------- BEGIN USER PREFERS REDUCED MOTION QUERY --------------- */
-    @-webkit-keyframes icon-animation {
-    0%   { font-variation-settings: "TIME" 1; }
-    100% { font-variation-settings: "TIME" 100; }
-}
-@keyframes icon-animation {
-    0%   { font-variation-settings: "TIME" 1; }
-    100% { font-variation-settings: "TIME" 100; }
-}
-
 @media (prefers-reduced-motion: reduce) {
     .icon {
         -webkit-animation: none !important;
@@ -266,10 +257,12 @@ img{
 
 /* ---------- ADJUSTING RESPONSIVE IMAGE SIZE ---------- */
 /* --------------- BEGIN RESPONSIVE IMAGE ADJUST SIZES --------------- */
-    img{
+@media screen and (min-width: 1380px) {
+    img {
         width: 300px;
         max-width: 300px;
-    } 
+    }
+}
 /* --------------- END RESPONSIVE IMAGE ADJUST SIZES --------------- */
 
 
